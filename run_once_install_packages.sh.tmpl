@@ -1,0 +1,33 @@
+#!/bin/sh
+
+{{ if eq .chezmoi.os "linux" }}
+
+# Arch Linux
+{{   if eq .chezmoi.osRelease.id_like "arch" }}
+
+sudo pacman -Syu --noconfirm
+sudo pacman -S --needed --noconfirm \
+    curl \
+    git \
+    sheldon \
+    starship \
+    zsh
+
+# Debian
+{{   else if eq .chezmoi.osRelease.id_like "debian" }}
+
+sudo apt-get update
+sudo apt-get install -y --no-install-recommends \
+    curl \
+    git \
+    zsh
+
+# sheldon
+curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
+    | sh -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
+
+# starship
+curl -sS https://starship.rs/install.sh | sh
+
+{{   end }}
+{{ end }}
