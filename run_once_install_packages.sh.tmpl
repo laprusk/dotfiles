@@ -3,7 +3,8 @@
 {{ if eq .chezmoi.os "linux" }}
 
 # Arch Linux
-{{   if eq .chezmoi.osRelease.id_like "arch" }}
+{{ $distro_base := (execute ) }}
+{{   if eq .chezmoi.osRelease.idLike "arch" }}
 
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed --noconfirm \
@@ -14,7 +15,7 @@ sudo pacman -S --needed --noconfirm \
     zsh
 
 # Debian
-{{   else if eq .chezmoi.osRelease.id_like "debian" }}
+{{   else if eq .chezmoi.osRelease.idLike "debian" }}
 
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
