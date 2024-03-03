@@ -1,0 +1,24 @@
+export LANG=ja_JP.UTF-8
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt autocd
+setopt appendhistory
+setopt extendedhistory
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history
+
+# starship
+eval "$(starship init zsh)"
+
+# sheldon
+eval "$(sheldon source)"
+
+# completion
+autoload -Uz compinit
+zsh-defer compinit
