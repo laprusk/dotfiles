@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo -v
+
 {{ if eq .chezmoi.os "linux" }}
 
 # Arch Linux
@@ -33,3 +35,6 @@ yes | sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 {{   end }}
 {{ end }}
+
+# Set zsh as default shell
+chsh -s "$(command -v zsh)"
