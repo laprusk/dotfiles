@@ -3,11 +3,10 @@
 sudo -v
 
 {{ if eq .chezmoi.os "linux" }}
-
-# Arch Linux
 {{   if eq .chezmoi.osRelease.idLike "arch" }}
+# Arch-based
 
-sudo pacman -Syu --noconfirm
+sudo pacman -Syyu --noconfirm
 sudo pacman -S --needed --noconfirm \
     curl \
     git \
@@ -15,8 +14,8 @@ sudo pacman -S --needed --noconfirm \
     starship \
     zsh
 
-# Debian
 {{   else if eq .chezmoi.osRelease.idLike "debian" }}
+# Debian-based
 
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
@@ -31,10 +30,10 @@ curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
 
 # starship
 echo "Installing starship..."
-yes | sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 {{   end }}
 {{ end }}
 
 # Set zsh as default shell
-chsh -s "$(command -v zsh)"
+sudo chsh -s "$(command -v zsh)"
