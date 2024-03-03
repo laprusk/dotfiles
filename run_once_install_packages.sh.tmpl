@@ -3,7 +3,6 @@
 {{ if eq .chezmoi.os "linux" }}
 
 # Arch Linux
-{{ $distro_base := (execute ) }}
 {{   if eq .chezmoi.osRelease.idLike "arch" }}
 
 sudo pacman -Syu --noconfirm
