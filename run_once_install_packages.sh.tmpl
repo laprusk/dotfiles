@@ -3,7 +3,7 @@
 sudo -v
 
 {{ if eq .chezmoi.os "linux" }}
-{{   if eq .chezmoi.osRelease.idLike "arch" }}
+{{   if (or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.idLike "arch" )) }}
 # Arch-based
 
 sudo pacman -Syyu --noconfirm
@@ -14,7 +14,7 @@ sudo pacman -S --needed --noconfirm \
     starship \
     zsh
 
-{{   else if eq .chezmoi.osRelease.idLike "debian" }}
+{{   else if (or (eq .chezmoi.osRelease.id "debian") (eq .chezmoi.osRelease.idLike "debian" )) }}
 # Debian-based
 
 sudo apt-get update
