@@ -1,0 +1,27 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+
+# Install packages
+{{ if eq .chezmoi.os "linux" }}
+{{   if (or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.idLike "arch" )) }}
+# Arch-based
+
+/bin/sh ./install_packages_arch.sh
+
+
+{{   else if (or (eq .chezmoi.osRelease.id "debian") (eq .chezmoi.osRelease.idLike "debian" )) }}
+# Debian-based
+
+/bin/sh ./install_packages_debian.sh
+
+{{   end }}
+{{ end }}
+
+
+# Set zsh as default shell
+sudo chsh -s "$(command -v zsh)" "${USER}"
+
+# Add user to docker group
+sudo groupadd docker
+sudo usermod -aG docker "${USER}"

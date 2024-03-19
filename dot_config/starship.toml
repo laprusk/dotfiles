@@ -3,3 +3,12 @@
 format = '[󰉋 $path]($style)[$read_only]($read_only_style) '
 truncation_length = 100
 truncate_to_repo = false
+
+[os]
+disabled = true
+
+[os.symbols]
+Arch = " "
+EndeavourOS = " "
+Debian = " "
+Ubuntu = " (bold purple)"
