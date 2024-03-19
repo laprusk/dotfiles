@@ -1,6 +1,8 @@
 #!/bin/sh
 
 # Install packages for Arch-based systems
+{{ if eq .chezmoi.os "linux" }}
+{{   if (or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.idLike "arch" )) }}
 
 function install_yay {
     if ! command -v yay &> /dev/null; then
@@ -69,4 +71,7 @@ install_yay
 # Desktop
 {{ if .desktop }}
 setup_desktop
+{{ end }}
+
+{{   end }}
 {{ end }}

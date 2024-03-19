@@ -1,6 +1,8 @@
 #!/bin/sh
 
 # Install packages for Debian-based systems
+{{ if eq .chezmoi.os "linux" }}
+{{   if (or (eq .chezmoi.osRelease.id "debian") (eq .chezmoi.osRelease.idLike "debian" )) }}
 
 sudo -v
 
@@ -44,3 +46,6 @@ curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 # Set locale
 sudo update-locale LANG=ja_JP.UTF-8
+
+{{   end }}
+{{ end }}
