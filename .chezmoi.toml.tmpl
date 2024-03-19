@@ -1,3 +1,5 @@
+{{ $desktop := false }}
+
 {{ if eq .chezmoi.os "linux" }}
 {{   if (or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.idLike "arch" )) }}
 {{     $desktop = promptBool "Do you want to install desktop-related packages" false }}
