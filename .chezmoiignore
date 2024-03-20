@@ -7,4 +7,5 @@ README.md
 .config/waybar
 .config/wofi
 .config/wlogout
+.config/Code
 {{ end }}
