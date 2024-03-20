@@ -1,15 +1,19 @@
-{{ $desktop := false }}
-
-{{ if eq .chezmoi.os "linux" }}
-{{   if (or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.idLike "arch" )) }}
-{{     $desktop = promptBool "Do you want to install desktop-related packages" false }}
-{{   end }}
+{{ $osid := .chezmoi.os }}
+{{ if hasKey .chezmoi.osRelease "idLike" }}
+{{   $osid = .chezmoi.osRelease.idLike }}
+{{ else if hasKey .chezmoi.osRelease "id" }}
+{{   $osid = .chezmoi.osRelease.id }}
 {{ end }}
 
+{{ $desktop := false }}
+{{ if eq $osid "arch" }}
+{{   $desktop = promptBool "Do you want to install desktop-related packages" false }}
+{{ end }}
 
 [edit]
     command = "code"
     args = ["--wait"]
 
 [data]
+    osid = {{ $osid | quote }}
     desktop = {{ $desktop }}
