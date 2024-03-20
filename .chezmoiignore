@@ -1,0 +1,10 @@
+README.md
+
+{{ if ne .desktop true }}
+# Ignore desktop configuration
+.config/kitty
+.config/hypr
+.config/waybar
+.config/wofi
+.config/wlogout
+{{ end }}
