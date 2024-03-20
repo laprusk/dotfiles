@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: Noto Sans CJK JP, Noto Sans, JetBrainsMono Nerd Font;
     font-size: 16px;
 }
 
@@ -57,7 +57,6 @@ window#waybar.chromium {
     /* border: 2px solid #ffffff; */
     border-radius: 50%;
     margin: 8px 0;
-    padding: 0;
 }
 
 /* #workspaces:first-child {
@@ -65,13 +64,12 @@ window#waybar.chromium {
 } */
 
 #workspaces button {
-    /* font-size: 20px; */
     background-color: transparent;
     color: #ffffff;
     border: 1.5px solid #ffffff;
     border-radius: 50%;
-    padding: 0px 5px;
-    margin: 2px 4px 4px 4px;
+    padding: 0 8px;
+    margin: 0 4px;
     transition: all 0.5s;
 }
 
@@ -95,8 +93,8 @@ window#waybar.chromium {
 }
 
 #custom-wlogout {
-    font-size: 1.7rem;
-    margin-right: 8px;
+    font-size: 1.3rem;
+    margin-right: 16px;
 }
 
 #clock,
