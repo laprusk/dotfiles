@@ -1,0 +1,13 @@
+{
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'UDEV Gothic 35NF'",
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "extensions.ignoreRecommendations": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false
+    }
+}
