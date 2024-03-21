@@ -88,7 +88,7 @@ window#waybar.chromium {
 
 #workspaces button.active:hover {
     /* background-color: rgba(255, 255, 255, 0.7); */
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 1);
     /* transition: all 0.5s; */
 }
 
@@ -97,23 +97,22 @@ window#waybar.chromium {
     margin-right: 16px;
 }
 
-#clock,
+/* #clock,
 #pulseaudio,
 #tray {
     font-size: 1.3rem;
-}
-
-/* #clock {
-    margin-left: 8px;
 } */
 
+#clock {
+    font-size: 1.2rem;
+}
+
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
-    opacity: 0;
     background-image: none;
-    border: none;
-    box-shadow: none;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    min-width: 0;
+    min-height: 0;
 }
 #pulseaudio-slider trough {
     min-height: 4px;
@@ -123,7 +122,7 @@ window#waybar.chromium {
 }
 #pulseaudio-slider highlight {
     border-radius: 5px;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
 }
 
 #mode {
@@ -171,16 +170,14 @@ window#waybar.chromium {
 }
 
 tooltip {
-    font-size: 2rem;
-    color: #ffffff;
     background-color: rgba(0, 0, 0, 0.7);
     border: 2px solid #dddddd;
     border-radius: 8px;
 }
 
 tooltip label {
-    font-size: 1.4rem;
-    padding: 4px 8px;
+    font-size: 1.2rem;
+    padding: 0;
 }
 
 /* #clock {
