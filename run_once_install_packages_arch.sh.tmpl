@@ -58,11 +58,11 @@ function install_hyprland {
         qt5-wayland \
         qt6-wayland \
         sddm \
-        waybar \
         wofi \
         xdg-desktop-portal-hyprland
 
     yay -S --needed --noconfirm \
+        aylurs-gtk-shell \
         wlogout
     
     sudo systemctl enable sddm.service
