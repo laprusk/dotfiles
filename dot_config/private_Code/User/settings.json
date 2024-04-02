@@ -9,5 +9,6 @@
         "plaintext": true,
         "markdown": false,
         "scminput": false
-    }
+    },
+    "window.titleBarStyle": "custom"
 }

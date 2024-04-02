@@ -1,0 +1,130 @@
+* {
+    all: unset;
+    transition: background-color .5s;
+}
+
+window {
+    background: none;
+    font-size: 16px;
+}
+
+.bar-content {
+    margin: 8px 8px 4px 8px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    background-color: alpha(@theme_bg_color, 0.7);
+}
+
+button {
+    min-width: 24px;
+    margin: 0 2px;
+    padding: 0 1px 2px 1px;
+    color: @theme_fg_color;
+    border-radius: 100px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: alpha(@theme_fg_color, 0.2);
+}
+
+button.volume {
+    color: @theme_fg_color;
+    padding: 0 8px;
+    font-weight: normal;
+}
+
+trough {
+    background-color: alpha(@theme_fg_color, 0.2);
+    min-height: 20px;
+    border-radius: 12px;
+}
+
+trough highlight,
+trough progress {
+    background-color: @theme_selected_bg_color;
+    border-radius: 12px;
+}
+
+trough slider {
+    min-height: 20px;
+    min-width: 1px;
+}
+
+.os {
+    color: @theme_fg_color;
+}
+
+.workspace {
+    color: alpha(@theme_fg_color, 0.5);
+}
+
+button.active {
+    background-color: @theme_selected_bg_color;
+}
+
+button.occupied {
+    color: @theme_fg_color;
+}
+
+.clock {
+    font-size: 1.1em;
+    /* font-weight: bold; */
+}
+
+.popup-content {
+    padding: 20px 16px;
+    border-radius: 12px;
+    background-color: alpha(@theme_bg_color, 0.5);
+}
+
+.window-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.section-title {
+    font-weight: bold;
+}
+
+.volume-slider-indicator {
+    padding: 8px 4px;
+    margin: 0;
+}
+
+.sink-item {
+    min-height: 32px;
+    padding: 4px 4px;
+    margin: 4px 0;
+    border-radius: 12px;
+    font-weight: normal;
+}
+
+.active-label {
+    background-color: transparent;
+    min-width: 5px;
+    transition: none;
+}
+
+.active .active-label {
+    background-color: @theme_selected_bg_color;
+    min-width: 5px;
+    /* min-height: 32px; */
+    border-radius: 32px 0 0 32px;
+}
+
+.sink-description {
+    margin-left: 8px;
+}
+
+.sink-selector .active {
+    background-color: alpha(@theme_fg_color, 0.2);
+}
+
+/* .sound {
+    transition: none;
+    margin: 8px 8px 4px 8px;
+    padding: 2px 16px;
+    border-radius: 12px;
+    background-color: alpha(@theme_bg_color, 0.7);
+} */

@@ -4,4 +4,4 @@ image_size=48
 width = 30%
 height = 40%
 prompt = Search
-normal_window = true
+normal_window = false
