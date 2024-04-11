@@ -32,6 +32,7 @@ const VolumeSlider = (type = "speaker") => Widget.Slider({
 })
 
 export default () => Widget.Box({
+    className: 'volume-slider-box',
     spacing: 8,
     children: [
         VolumeIndicator(),
