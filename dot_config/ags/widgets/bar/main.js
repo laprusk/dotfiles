@@ -3,6 +3,7 @@ import Os from './os.js'
 import Workspaces from './workspaces.js'
 import Title from './title.js'
 import Volume from './volume.js'
+import Tray from './tray.js'
 
 const Left = () => Widget.Box({
     spacing: 8,
@@ -21,8 +22,9 @@ const Center = () => Widget.Box({
 
 const Right = () => Widget.Box({
     hpack: "end",
-    spacing: 16,
+    spacing: 12,
     children: [
+        Tray(),
         Volume(),
         Clock(),
     ]
