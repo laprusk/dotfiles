@@ -1,4 +1,4 @@
-* {
+*:not(menu) {
     all: unset;
     transition: background-color .3s;
 }
@@ -38,6 +38,21 @@ menuitem {
 
 menuitem:hover {
     background-color: alpha(@theme_fg_color, 0.2);
+}
+
+radio {
+    margin-right: 8px;
+    min-width: 14px;
+    min-height: 14px;
+    border-radius: 100px;
+    border: 1px solid alpha(@theme_fg_color, 0.5);
+}
+
+radio:checked {
+    min-width: 10px;
+    min-height: 10px;
+    background-color: @theme_fg_color;
+    border: 4px solid @theme_selected_bg_color;
 }
 
 .panel-button {
