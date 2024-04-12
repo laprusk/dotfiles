@@ -1,4 +1,12 @@
-*:not(menu) {
+/* * {
+    all: unset;
+    transition: background-color .3s;
+} */
+
+.bar *,
+scale,
+scale *,
+button {
     all: unset;
     transition: background-color .3s;
 }
@@ -25,7 +33,7 @@ button:hover {
     background-color: alpha(@theme_fg_color, 0.2);
 }
 
-menu {
+/* menu {
     background-color: @theme_bg_color;
     border-radius: 12px;
     padding: 12px;
@@ -53,7 +61,7 @@ radio:checked {
     min-height: 10px;
     background-color: @theme_fg_color;
     border: 4px solid @theme_selected_bg_color;
-}
+} */
 
 .panel-button {
     color: @theme_fg_color;
@@ -105,6 +113,8 @@ trough slider {
 
 .tray-item {
     padding: 0 4px;
+    min-width: 24px;
+    border-radius: 100px;
 }
 
 .clock {
