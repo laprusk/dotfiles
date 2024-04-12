@@ -4,8 +4,11 @@ README.md
 # Ignore desktop configuration
 .config/kitty
 .config/hypr
+.config/ags
 .config/waybar
 .config/wofi
 .config/wlogout
 .config/Code
 {{ end }}
+
+.config/ags/types

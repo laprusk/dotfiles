@@ -12,7 +12,7 @@ const Left = () => Widget.Box({
 })
 
 const Center = () => Widget.Box({
-    spacing: 8,
+    spacing: 4,
     children: [
         Os(),
         Workspaces(),

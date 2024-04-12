@@ -1,6 +1,6 @@
 * {
     all: unset;
-    transition: background-color .5s;
+    transition: background-color .3s;
 }
 
 window {
@@ -16,22 +16,22 @@ window {
 }
 
 button {
-    min-width: 24px;
-    margin: 0 2px;
-    padding: 0 1px 2px 1px;
     color: @theme_fg_color;
     border-radius: 100px;
-    font-weight: bold;
 }
 
 button:hover {
     background-color: alpha(@theme_fg_color, 0.2);
 }
 
-button.volume {
+.panel-button {
     color: @theme_fg_color;
+    border-radius: 100px;
     padding: 0 8px;
-    font-weight: normal;
+}
+
+.panel-button.active {
+    background-color: @theme_selected_bg_color;
 }
 
 trough {
@@ -51,19 +51,24 @@ trough slider {
     min-width: 1px;
 }
 
-.os {
-    color: @theme_fg_color;
+.os,
+.workspace {
+    min-width: 24px;
+    margin: 0 2px;
+    padding: 0 1px 2px 1px;
+    border-radius: 100px;
+    font-weight: bold;
 }
 
 .workspace {
     color: alpha(@theme_fg_color, 0.5);
 }
 
-button.active {
+.workspace.active {
     background-color: @theme_selected_bg_color;
 }
 
-button.occupied {
+.workspace.occupied {
     color: @theme_fg_color;
 }
 
@@ -114,7 +119,7 @@ button.occupied {
 .active .active-label {
     background-color: @theme_selected_bg_color;
     min-width: 5px;
-    /* min-height: 32px; */
+
     border-radius: 32px 0 0 32px;
 }
 

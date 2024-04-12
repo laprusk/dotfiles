@@ -7,7 +7,7 @@ const toRoman = num => {
     return roman[num - 1] || num;
 }
 
-const visibleWorkspaces = 6;
+const visibleWorkspaces = 5;
 
 const workspaceButtons = Widget.Box({
     children: Array.from({ length: 10 }, (_, i) => i + 1).map(i => Widget.Button({
@@ -21,7 +21,7 @@ const workspaceButtons = Widget.Box({
         })
     })),
 
-    // Only 7 buttons will be visible, the rest will be hidden
+    // Only 5 buttons will be visible, the rest will be hidden
     setup: self => self.hook(hyprland, () => self.children.forEach(btn => {
         btn.visible = btn.attribute <= visibleWorkspaces
             || hyprland.workspaces.some(ws => ws.id === btn.attribute);

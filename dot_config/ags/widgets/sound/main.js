@@ -6,7 +6,7 @@ const SoundSettings = Widget.Box({
     spacing: 16,
     className: 'popup-content sound',
     vertical: true,
-    css: "min-width: 350px; margin-right: 50px;",
+    css: "min-width: 330px; margin-right: 50px;",
     children: [
         Widget.Label({ label: "Sound", hpack: 'start', className: 'window-title'}),
         VolumeSlider(),
