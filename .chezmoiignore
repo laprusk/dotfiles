@@ -2,13 +2,15 @@ README.md
 
 {{ if ne .desktop true }}
 # Ignore desktop configuration
-.config/kitty
-.config/hypr
 .config/ags
+.config/hypr
+.config/kitty
 .config/waybar
-.config/wofi
 .config/wlogout
+.config/wofi
 .config/Code
+.config/code-flags.conf
+.config/vivaldi-stable.conf
 {{ end }}
 
 .config/ags/types
