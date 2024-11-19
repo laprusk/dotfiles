@@ -26,3 +26,17 @@ eval "$(sheldon source)"
 # completion
 autoload -Uz compinit
 zsh-defer compinit
+
+# abbr
+{
+abbr -S ll='ls -la'
+# git
+abbr -S g='git'
+abbr -S gst='git status'
+abbr -S gbr='git branch'
+abbr -S gco='git checkout'
+abbr -S ga='git add .'
+abbr -S gcm='git commit -m'
+abbr -S gacm='git add . && git commit -m'
+abbr -S gpo='git push origin'
+} > /dev/null
