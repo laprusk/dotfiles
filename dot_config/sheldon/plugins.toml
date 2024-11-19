@@ -22,5 +22,5 @@ github = "zsh-users/zsh-completions"
 apply = ["defer"]
 
 [plugins.zsh-abbr]
-github = "https://github.com/olets/zsh-abbr"
+github = "olets/zsh-abbr"
 apply = ["defer"]
