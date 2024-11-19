@@ -7,10 +7,12 @@ sudo -v
 
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
+    build-essential \
     ca-certificates \
     curl \
     git \
     neofetch \
+    neovim \
     zsh \
     language-pack-ja \
     manpages-ja \
@@ -34,6 +36,16 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 
+# Rust
+echo "Installing Rust..."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+
+# mise
+echo "Installing mise..."
+curl https://mise.run | sh
+
+
 # sheldon
 echo "Installing sheldon..."
 curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
@@ -43,6 +55,7 @@ curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
 # starship
 echo "Installing starship..."
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
+
 
 # Set locale
 sudo update-locale LANG=ja_JP.UTF-8
