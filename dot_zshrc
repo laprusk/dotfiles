@@ -30,6 +30,8 @@ zsh-defer compinit
 # abbr
 {
 abbr -S ll='ls -la'
+abbr -S au='sudo apt update'
+abbr -S ai='sudo apt install -y'
 # git
 abbr -S g='git'
 abbr -S gst='git status'
